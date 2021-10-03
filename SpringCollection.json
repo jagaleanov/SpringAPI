@@ -8,19 +8,19 @@
 		{
 			"name": "userCreate",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "userList",
-			"request": {
-				"method": "GET",
-				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"name1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/user/listUsers",
+					"raw": "http://localhost:8080/user/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -28,7 +28,39 @@
 					"port": "8080",
 					"path": [
 						"user",
-						"listUsers"
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"list"
 					]
 				}
 			},
@@ -36,38 +68,23 @@
 		},
 		{
 			"name": "userPerName",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
 			},
-			"response": []
-		},
-		{
-			"name": "userPerLetter",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "categoryCreate",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "categoryList",
-			"request": {
-				"method": "GET",
-				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/user/listUsers",
+					"raw": "http://localhost:8080/user/perName/user1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -75,7 +92,102 @@
 					"port": "8080",
 					"path": [
 						"user",
-						"listUsers"
+						"perName",
+						"user1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userPerLetter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/perLetter/u",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"perLetter",
+						"u"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"category1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/category/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoryList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/category/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"list"
 					]
 				}
 			},
@@ -83,37 +195,94 @@
 		},
 		{
 			"name": "categoryPerName",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
 			},
-			"response": []
-		},
-		{
-			"name": "postCreate",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "postList",
-			"request": {
-				"method": "GET",
-				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/user/listUsers",
+					"raw": "http://localhost:8080/category/perName/category1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"user",
-						"listUsers"
+						"category",
+						"perName",
+						"category1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"post1\",\r\n    \"content\":\"content\",\r\n    \"category\":\"category1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/post/perName/category1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post",
+						"perName",
+						"category1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/post/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post",
+						"list"
 					]
 				}
 			},
@@ -121,10 +290,34 @@
 		},
 		{
 			"name": "postPerTitle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/post/perTitle/post1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post",
+						"perTitle",
+						"post1"
+					]
+				}
 			},
 			"response": []
 		}
