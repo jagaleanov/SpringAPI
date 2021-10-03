@@ -3,6 +3,10 @@ package com.example1.demo1.dto;
 import com.example1.demo1.model.User;
 
 public class UserDto {
+    public UserDto (){
+        super();
+    }
+
     private String name;
     /**
      * @return the name
@@ -20,9 +24,5 @@ public class UserDto {
         User user = new User();
         user.setName(this.name);
         return user;
-    }
-    public UserDto (String color, String name, String username, String password){
-        super();
-        this.name=name;
     }
 }

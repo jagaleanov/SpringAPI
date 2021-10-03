@@ -5,6 +5,10 @@ import com.example1.demo1.model.Category;
 public class CategoryDto {
     private String name;
 
+    public CategoryDto() {
+        super();
+    }
+
     /**
      * @return the categoryname
      */
@@ -26,10 +30,5 @@ public class CategoryDto {
         Category category = new Category();
         category.setName(this.name);
         return category;
-    }
-
-    public CategoryDto(String name) {
-        super();
-        this.name = name;
     }
 }

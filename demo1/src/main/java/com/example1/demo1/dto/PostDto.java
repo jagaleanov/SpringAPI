@@ -8,6 +8,10 @@ public class PostDto {
     private String content;
     private Category category;
 
+    public PostDto() {
+        super();
+    }
+
     /**
      * @return the title
      */
@@ -56,12 +60,5 @@ public class PostDto {
         post.setContent(this.content);
         post.setCategoryId(this.category);
         return post;
-    }
-
-    public PostDto(String title, String content, Category category) {
-        super();
-        this.title = title;
-        this.content = content;
-        this.category = category;
     }
 }
